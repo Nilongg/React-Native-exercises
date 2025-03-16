@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { View, Text, StyleSheet, Button, Linking } from 'react-native';
 import * as Location from 'expo-location';
-import Camera from 'expo-camera'; // For permission functions
 
 export default function App() {
   const [locationPermission, setLocationPermission] = useState(false);
@@ -13,7 +12,7 @@ export default function App() {
     if (status === 'granted') {
       setLocationPermission(true);
     } else {
-      console.log('Sijaintilupaa ei myönnetty');
+      console.log('Location permission granted');
     }
   };
 
